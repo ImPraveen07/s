@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
+    <title>Hello, World!</title>
+    <style>
+        a {
+            color: dodgerblue;
+            font-size: 14px; /* Size for the links */
+            text-decoration: none; /* Remove underline from all links */
+        }
+        body {
+            background-color: #000; /* Black background */
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remove default margin */
+            padding: 20px; /* Add padding for better layout */
+            text-align: center; /* Center align content */
+        }
+        .input-container {
+            position: relative; /* For positioning the button inside the container */
+            width: 90%;
+            max-width: 400px;
+            margin: 10px auto;
+        }
+        .input-box {
+            background-color: #000; /* Black background color for input fields */
+            color: #fff; /* White text color */
+            border: 1px solid rgba(255, 255, 255, 0.5); /* Light white border */
+            padding: 12px;
+            padding-right: 50px; /* Space for the button */
+            width: 100%; /* Full width */
+            box-sizing: border-box;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .input-box::placeholder {
+            color: #bbb; /* Lighter gray for placeholder text */
+        }
+        img {
+            max-width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            margin: 10px 0; /* Add spacing around images */
+        }
+        .show-btn {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #000; /* Black background for button */
+            border: none; /* No border */
+            color: #fff; /* White text color */
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 5px;
+            display: none; /* Hide button by default */
+        }
+        .forgot-password {
+            width: 90%;
+            max-width: 400px;
+            margin: 10px auto;
+            text-align: right;
+        }
+        .forgot-password a {
+            font-size: 12px; /* Reduce the font size */
+        }
+        .im-here {
+            color: grey; /* Light grey text color for the additional text */
+            font-size: 12px; /* Same font size as the link */
+            margin-right: 5px; /* Spacing between text and link */
+        }
+        .forgot-name {
+            width: 90%;
+            max-width: 400px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        .link2 {
+            color: white;
+        }
+        .language-selector {
+            margin-bottom: 15px; /* Add space between the language selector and input fields */
+        }
+        .language-selector select {
+            background-color: #000;
+            color: grey;
+            border: none; /* Remove border */
+            padding: 5px; /* Smaller padding */
+            border-radius: 3px; /* Slight rounding */
+            font-size: 12px; /* Smaller font size */
+            outline: none; /* Remove outline */
+        }
+    </style>
+</head>
+<body>
+<div class="language-selector">
+    <select>
+        <option value="am">አማርኛ (Amharic)</option>
+        <option value="ar">العربية (Arabic)</option>
+        <option value="bn">বাংলা (Bengali)</option>
+        <option value="bg">Български (Bulgarian)</option>
+        <option value="zh">中文 (Chinese)</option>
+        <option value="cs">Čeština (Czech)</option>
+        <option value="da">Dansk (Danish)</option>
+        <option value="nl">Nederlands (Dutch)</option>
+        <option value="en">English</option>
+        <option value="et">Eesti (Estonian)</option>
+        <option value="fi">Suomi (Finnish)</option>
+        <option value="fr">Français (French)</option>
+        <option value="de">Deutsch (German)</option>
+        <option value="el">Ελληνικά (Greek)</option>
+        <option value="gu">ગુજરાતી (Gujarati)</option>
+        <option value="he">עברית (Hebrew)</option>
+        <option value="hi">हिन्दी (Hindi)</option>
+        <option value="hr">Hrvatski (Croatian)</option>
+        <option value="hu">Magyar (Hungarian)</option>
+        <option value="is">Íslenska (Icelandic)</option>
+        <option value="id">Bahasa Indonesia (Indonesian)</option>
+        <option value="it">Italiano (Italian)</option>
+        <option value="ja">日本語 (Japanese)</option>
+        <option value="kn">ಕನ್ನಡ (Kannada)</option>
+        <option value="ko">한국어 (Korean)</option>
+        <option value="lt">Lietuvių (Lithuanian)</option>
+        <option value="lv">Latviešu (Latvian)</option>
+        <option value="ml">മലയാളം (Malayalam)</option>
+        <option value="mt">Malti (Maltese)</option>
+        <option value="mr">मराठी (Marathi)</option>
+        <option value="ms">Bahasa Melayu (Malay)</option>
+        <option value="no">Norsk (Norwegian)</option>
+        <option value="or">ଓଡ଼ିଆ (Odia)</option>
+        <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+        <option value="fa">فارسی (Persian)</option>
+        <option value="pl">Polski (Polish)</option>
+        <option value="pt">Português (Portuguese)</option>
+        <option value="ro">Română (Romanian)</option>
+        <option value="ru">Русский (Russian)</option>
+        <option value="sr">Српски (Serbian)</option>
+        <option value="sk">Slovenčina (Slovak)</option>
+        <option value="sl">Slovenščina (Slovenian)</option>
+        <option value="es">Español (Spanish)</option>
+        <option value="sv">Svenska (Swedish)</option>
+        <option value="ta">தமிழ் (Tamil)</option>
+        <option value="te">తెలుగు (Telugu)</option>
+        <option value="th">ไทย (Thai)</option>
+        <option value="tr">Türkçe (Turkish)</option>
+        <option value="uk">Українська (Ukrainian)</option>
+        <option value="vi">Tiếng Việt (Vietnamese)</option>
+    </select>
+</div>
+
+    <img src="https://assets.onecompiler.app/42tmq6jud/3ww47radw/1000096232.jpg" alt="Image 1">
+    
+    <a href="https://www.facebook.com/">
+        <img src="https://assets.onecompiler.app/42tmq6jud/3ww47radw/1000096260.jpg" alt="Facebook Logo">
+    </a>
+
+    <img src="https://assets.onecompiler.app/42tmq6jud/3ww47radw/1000096261.jpg" alt="Image 2">
+
+    <div class="input-container">
+        <input type="text" class="input-box" placeholder="Phone number, username or email address">
+    </div>
+    
+    <div class="input-container">
+        <input type="password" id="password" class="input-box" placeholder="Password" oninput="toggleButtonVisibility()">
+        <button class="show-btn" onclick="togglePassword()">Show</button>
+    </div>
+
+    <div class="forgot-password">
+        <a href="https://www.instagram.com/accounts/password/reset/">Forgot password?</a>
+    </div>
+
+    <img src="https://assets.onecompiler.app/42tmq6jud/3ww47radw/1000096259.jpg">
+
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            var showButton = document.querySelector(".show-btn");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                showButton.textContent = "Hide";
+            } else {
+                passwordField.type = "password";
+                showButton.textContent = "Show";
+            }
+        }
+
+        function toggleButtonVisibility() {
+            var passwordField = document.getElementById("password");
+            var showButton = document.querySelector(".show-btn");
+            if (passwordField.value.length > 0) {
+                showButton.style.display = "block"; // Show the button if there's input
+            } else {
+                showButton.style.display = "none"; // Hide the button if there's no input
+            }
+        }
+    </script>
+  
+    <div class="forgot-password">
+        <span class="im-here">Don't have an account?</span>
+        <a href="https://www.instagram.com/accounts/signup/phone/">Sign up</a>
+    </div><br><br>
+  
+    <div class="forgot-name">
+        <span class="im-here">By continuing, you agree to Instagram's</span>
+        <a href="https://help.instagram.com/581066165581870/?locale=en_GB" class="link2">Terms<br>of Use</a>
+    
+        <span class="im-here">and</span>
+        <a href="https://privacycenter.instagram.com/policy/" class="link2">Privacy Policy</a><br>
+    </div><br><br><br><br>
+    <img src="https://assets.onecompiler.app/42tmq6jud/3ww47radw/1000096279.jpg">
+</body>
+</html>
